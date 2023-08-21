@@ -41,9 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const mainScreen = document.getElementById("main-screen");
   const logoutButton = document.getElementById("logout-button");
-  const restartButton = document.getElementById("restart");
   const gamerNameInput = document.getElementById("gamer-name");
   const displayName = document.getElementById("user-name");
+  const restartButton = document.getElementById("restart");
 
   restartButton.addEventListener("click", () => restartGame());
 
@@ -193,10 +193,16 @@ function showModal() {
 
   document.getElementById("selected_bag").innerHTML =
     userBags && userBags.length ? userBags[0].label : "";
-  document.getElementById("random_bag").innerHTML = randomBag.label;
   document.getElementById("switch_container_title").style.display = "block";
   document.getElementById("switch_containers").style.display = "flex";
-  document.getElementById("random_bag_container").style.display = "block";
+  document.getElementById("question_bag_container").style.display = "block";
+  setTimeout(() => {
+    document.getElementById("question_bag_container").style.display = "none";
+  document.getElementById("random_bag").innerHTML = randomBag.label;
+
+    document.getElementById("random_bag_container").style.display = "block";  
+
+  }, 2000)
   document.getElementById("choosed_bag_container").style.display = "block";
   document.getElementById("choose_img").style.border =
     "5px solid black";
