@@ -125,23 +125,28 @@
         </div>
       </div>
 
-      <h1 id="switch_container_title"  style="display: none">Do you want to switch bags?</h1>
+      <h1 id="switch_container_title" style="display: none">
+        Do you want to switch bags?
+      </h1>
 
       <div
         class="switch_containers"
         id="switch_containers"
         style="display: none"
       >
-      
         <!-- selected bag -->
         <div class="choosed_bag_container" id="choosed_bag_container">
-          <img src="images/bag.svg" id="choose_img" alt="bag image"/>
+          <img src="images/bag.svg" id="choose_img" alt="bag image" />
           <p id="selected_bag" class="selected-bag"></p>
           <div class="bag-type-label">Selected Bag</div>
         </div>
+        <!-- question mark image when random bag is loading -->
+        <div class="question_bag_container" id="question_bag_container">
+          <img src="images/question.svg" alt="bag Image" id="question_img" />
+        </div>
         <!-- random bag -->
         <div class="random_bag_container" id="random_bag_container">
-          <img src="images/bag.svg" alt="bag Image" id="random_img"/>
+          <img src="images/bag.svg" alt="bag Image" id="random_img" />
           <div class="selected-title" id="random_bag"></div>
           <div class="bag-type-label">Random Bag</div>
         </div>
@@ -150,7 +155,6 @@
         <h2 id="selection_description">Select one</h2>
         <h2>Are you sure you want to go ahead with this bag?</h2>
         <button id="switchYes">Yes</button>
-        <!-- <button id="switchNo">No</button> -->
       </div>
 
       <!-- winning modal -->
